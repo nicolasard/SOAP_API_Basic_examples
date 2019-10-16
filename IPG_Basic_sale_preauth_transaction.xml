@@ -1,0 +1,23 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ipg="http://ipg-online.com/ipgapi/schemas/ipgapi" xmlns:v1="http://ipg-online.com/ipgapi/schemas/v1">
+  <soapenv:Header/>
+  <soapenv:Body>
+     <ipg:IPGApiOrderRequest>
+        <v1:Transaction>
+           <v1:CreditCardTxType>
+              <v1:StoreId>?</v1:StoreId>
+              <v1:Type>sale</v1:Type> <!-- preauth -->
+           </v1:CreditCardTxType>
+           <v1:CreditCardData>
+              <v1:CardNumber>5165850000000008</v1:CardNumber>
+              <v1:ExpMonth>12</v1:ExpMonth>
+              <v1:ExpYear>22</v1:ExpYear>
+              <v1:CardCodeValue>123</v1:CardCodeValue>
+           </v1:CreditCardData>
+           <v1:Payment>
+              <v1:ChargeTotal>100.00</v1:ChargeTotal>
+              <v1:Currency>032</v1:Currency>
+           </v1:Payment>
+        </v1:Transaction>
+     </ipg:IPGApiOrderRequest>
+  </soapenv:Body>
+</soapenv:Envelope>

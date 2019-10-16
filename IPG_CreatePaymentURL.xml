@@ -1,0 +1,25 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ipg="http://ipg-online.com/ipgapi/schemas/ipgapi" xmlns:a1="http://ipg-online.com/ipgapi/schemas/a1" xmlns:v1="http://ipg-online.com/ipgapi/schemas/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ipg:IPGApiActionRequest>
+         <a1:Action>
+            <a1:CreatePaymentURL>
+               <a1:Transaction>
+                  <v1:PaymentUrlTxType>
+                     <v1:StoreId>5900000000</v1:StoreId> <!-- optional -->
+                     <v1:Type>sale</v1:Type>
+                  </v1:PaymentUrlTxType>
+                  <v1:Payment>
+                     <v1:ChargeTotal>100.00</v1:ChargeTotal>
+                     <v1:Currency>032</v1:Currency>
+                  </v1:Payment>
+                  <v1:TransactionDetails>
+                     <v1:OrderId>MY-ORDER-ID-001</v1:OrderId> <!-- optional -->
+                  </v1:TransactionDetails>
+               </a1:Transaction>
+              <a1:Expiration>1566566059876</a1:Expiration> <!-- optional: date in unix timestamp -->
+            </a1:CreatePaymentURL>
+         </a1:Action>
+      </ipg:IPGApiActionRequest>
+   </soapenv:Body>
+</soapenv:Envelope>

@@ -1,0 +1,42 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ipg="http://ipg-online.com/ipgapi/schemas/ipgapi" xmlns:v1="http://ipg-online.com/ipgapi/schemas/v1">
+  <soapenv:Header/>
+  <soapenv:Body>
+    <ipg:IPGApiOrderRequest>
+      <v1:Transaction>
+        <v1:CreditCardTxType>
+          <!--v1:StoreId>5900000000</v1:StoreId-->
+          <v1:Type>sale</v1:Type> <!-- preauth -->
+        </v1:CreditCardTxType>
+        <v1:CreditCardData>
+          <v1:CardNumber>4000000000000002</v1:CardNumber>
+          <v1:ExpMonth>10</v1:ExpMonth>
+          <v1:ExpYear>22</v1:ExpYear>
+          <v1:CardCodeValue>123</v1:CardCodeValue>
+        </v1:CreditCardData>
+        <v1:SubMerchant>
+          <v1:Mcc>1234</v1:Mcc>
+          <v1:LegalName>PFACTEST123456789</v1:LegalName>
+          <v1:Address>
+            <v1:Address1>Some Street 1234</v1:Address1>
+            <v1:Zip>1234</v1:Zip>
+            <v1:City>BUENOS AIRES</v1:City>
+            <v1:Country>ARG</v1:Country>
+          </v1:Address>
+          <v1:Document>
+            <v1:Type>SINGLE_TAX_IDENTIFICATION</v1:Type>
+            <v1:Number>23958987579</v1:Number>
+          </v1:Document>
+          <!--Optional-->
+          <v1:MerchantID>25244047</v1:MerchantID>
+        </v1:SubMerchant>
+        <v1:Payment>
+          <v1:ChargeTotal>1.00</v1:ChargeTotal>
+          <v1:Currency>ARS</v1:Currency>
+        </v1:Payment>
+        <v1:TransactionDetails>
+          <v1:OrderId>my-order-id</v1:OrderId>
+        </v1:TransactionDetails>
+      </v1:Transaction>
+    </ipg:IPGApiOrderRequest>
+  </soapenv:Body>
+</soapenv:Envelope>

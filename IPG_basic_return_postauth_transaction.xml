@@ -1,0 +1,19 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ipg="http://ipg-online.com/ipgapi/schemas/ipgapi" xmlns:v1="http://ipg-online.com/ipgapi/schemas/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ipg:IPGApiOrderRequest>
+         <v1:Transaction>
+            <v1:CreditCardTxType>
+               <v1:Type>return</v1:Type> <!-- postauth -->
+            </v1:CreditCardTxType>
+            <v1:Payment>
+               <v1:ChargeTotal>100.00</v1:ChargeTotal>
+               <v1:Currency>032</v1:Currency>
+            </v1:Payment>
+            <v1:TransactionDetails>
+               <v1:OrderId>my-order-id</v1:OrderId>
+            </v1:TransactionDetails>
+         </v1:Transaction>
+      </ipg:IPGApiOrderRequest>
+   </soapenv:Body>
+</soapenv:Envelope>

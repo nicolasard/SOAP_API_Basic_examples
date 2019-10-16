@@ -1,0 +1,13 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ipg="http://ipg-online.com/ipgapi/schemas/ipgapi" xmlns:a1="http://ipg-online.com/ipgapi/schemas/a1" xmlns:v1="http://ipg-online.com/ipgapi/schemas/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ipg:IPGApiActionRequest>
+         <a1:Action>
+            <a1:InquiryOrder>
+               <!--a1:StoreId>5900000000</a1:StoreId-->
+               <a1:OrderId>my-order-id</a1:OrderId>
+            </a1:InquiryOrder>
+         </a1:Action>
+      </ipg:IPGApiActionRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
